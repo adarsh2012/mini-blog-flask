@@ -15,7 +15,7 @@ class User(db.Model, UserMixin):
 class Blog(db.Model):
     __tablename__ = 'blog'
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(150), unique=True)
+    name = db.Column(db.String(150))
     status = db.Column(db.Integer, db.ForeignKey('status.id'))
     category = db.Column(db.Integer, db.ForeignKey('category.id'))
     content = db.Column(db.Text)
