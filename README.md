@@ -1,2 +1,2 @@
 # mini-blog-flask
-Simple mini-blog
+Flask based mini-blog application
