@@ -1,3 +1,23 @@
 {% extends "home_main.html" %}
 {% block blog_Content %}
+<div class="row justify-content-center">
+    {% for blog in blogs %}
+    {% if blog.status == "active" %}
+    <div class="card bg-light mb-3" style="max-width: 75%;">
+    <div class="card-header">Created at : {{ blog.date_created }}</div>
+    {% else %}
+    <div class="card text-white bg-dark mb-3" style="max-width: 75%;">
+    <div class="card-header">Created at : {{ blog.date_created }} <span class="text-danger">(in active)</span></div>
+    {% endif %}
+    <div class="card-body">
+      <h6 class="card-subtitle mb-2 text-muted">{{ blog.category }}</h6>
+      <h5 class="card-title">{{ blog.title }}</h5>
+      <p class="card-text">{{ blog.content }}</p>
+      <footer class="blockquote-footer">Created by <cite title="Source Title">{{ blog.created_by }}</cite></footer>
+      <a href="/blog/delete/{{blog.id}}" class="btn btn-danger" role="button" >Delete?</a>
+      <!-- <button type="button" class="btn btn-danger" >Delete?</button> -->
+    </div>
+  </div>    
+  {% endfor %}
+</div>
 {% endblock%}
