@@ -34,12 +34,12 @@
         </div>
         <select id="status" name="Status" onchange="Change(this);">
             {% for status in statuses %}
-            <option value="{{loop.index}}">{{status.status}}</option>
+            <option value="{{status.id}}">{{status.status}}</option>
             {% endfor %}
         </select>
         <select id="category" name="Category" onchange="Change(this);">
             {% for category in categories %}
-            <option value="{{loop.index}}">{{category.category_name}}</option>
+            <option value="{{category.id}}">{{category.category_name}}</option>
             {% endfor %}
         </select>
         <div class="form-group">
