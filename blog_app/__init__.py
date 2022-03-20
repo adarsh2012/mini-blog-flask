@@ -17,7 +17,7 @@ def create_app():
     setup_db_data(app)
     #Login
     login_manager = LoginManager()
-    login_manager.login_view =  "auth.view"
+    login_manager.login_view =  "auth.login"
     login_manager.init_app(app)
 
     @login_manager.user_loader
