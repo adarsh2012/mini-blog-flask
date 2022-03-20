@@ -61,3 +61,9 @@ def sign_up():
             return redirect(url_for('blog.home_page'))
 
     return render_template("sign_up.html")
+
+@auth.route("/logout")
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for("views.home"))
