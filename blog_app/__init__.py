@@ -9,7 +9,7 @@ def create_app():
     app = flask.Flask(__name__)
     app.config["SECRET_KEY"] = "adsd"
     #DB configuration
-    app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://root:root@127.0.0.1:3306/mini_blog"
+    app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://root:root@localhost:3838/mini_blog"
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     from .models import User
     db.init_app(app)
