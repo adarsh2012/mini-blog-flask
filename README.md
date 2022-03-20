@@ -9,6 +9,7 @@ docker-compose up
 ```
 
 Database name, root password & port can be modified in the docker-compose.yml file
+
 Run app (from root directory)
 
 ```
